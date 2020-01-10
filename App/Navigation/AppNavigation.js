@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { createStackNavigator } from 'react-navigation-stack'
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
+import DealScreen from '../Containers/DealScreen'
 import AddScreen from '../Containers/AddScreen'
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import HomeScreen from '../Containers/HomeScreen'
@@ -19,7 +20,7 @@ const HomeStack = createStackNavigator(
   },
   {
     headerMode: 'float',
-    initialRouteName: 'AddScreen',
+    initialRouteName: 'HomeScreen',
   }
 )
 const tabNavigator = createBottomTabNavigator(
@@ -38,14 +39,14 @@ const tabNavigator = createBottomTabNavigator(
       }
     },
     Plantab: {
-      screen: LaunchScreen,
+      screen: DealScreen,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => (
           <Icon1 name="clipboard-text" size={20} color={tintColor} />
         ),
-        tabBarLabel: "Kế hoạch",
+        tabBarLabel: "Giao dịch",
         tabBarOnPress: ({ navigation, defaultHandler }) => {
-          navigation.navigate("HomeScreen");
+          navigation.navigate("DealScreen");
           defaultHandler();
         }
       }
@@ -87,6 +88,7 @@ const tabNavigator = createBottomTabNavigator(
     }
   })
 const PrimaryNav = createStackNavigator({
+  DealScreen: { screen: DealScreen },
   // LaunchScreen: { screen: LaunchScreen },
   tabNavigator: { screen: tabNavigator }
 }, {
