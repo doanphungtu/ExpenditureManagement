@@ -26,5 +26,35 @@ export default StyleSheet.create({
     width: '88%',
     textAlign: 'center',
     lineHeight: 64,
+  },
+  tabBottom: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    backgroundColor: '#5EDFFF',
+    height: 56,
+    borderRadius: 8
+  },
+  touch: {
+    width: '40%', height: '80%', backgroundColor: 'white', borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  items: {
+    alignItems: 'center',
+    flexDirection: "row",
+    height: 56,
+    backgroundColor:'#FCF9ED'
+  },
+  txtItems: {
+    flex: 1.5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  boxItems: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })

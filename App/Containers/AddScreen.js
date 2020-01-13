@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 // import YourActions from '../Redux/YourRedux'
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
 import { Makiko, Kaede } from 'react-native-textinput-effects';
+import SvgUri from 'react-native-svg-uri';
 // Styles
 import styles from './Styles/AddScreenStyle'
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -41,8 +42,14 @@ class AddScreen extends Component {
       <View style={{ backgroundColor: '#EFFBFF', padding: 23 }}>
         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
           <TouchableOpacity activeOpacity={.7} activeOpacity={.7} style={styles.itemTouch}>
-            <View style={[styles.viewTopItem, { paddingTop: 5 }]}>
-              <Image source={Images.thucan} />
+            <View style={[styles.viewTopItem,]}>
+              {/* <Image source={Images.thucan} />
+             */}
+              <SvgUri
+                width={27}
+                height={27}
+                source={Images.thucan}
+              />
             </View>
             <View style={styles.viewBottomItem}>
               <Text style={[styles.txtItem]}>Ẩm thực</Text>

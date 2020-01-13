@@ -20,7 +20,7 @@ const HomeStack = createStackNavigator(
   },
   {
     headerMode: 'float',
-    initialRouteName: 'HomeScreen',
+    initialRouteName: 'AddScreen',
   }
 )
 const tabNavigator = createBottomTabNavigator(
@@ -88,8 +88,8 @@ const tabNavigator = createBottomTabNavigator(
     }
   })
 const PrimaryNav = createStackNavigator({
-  DealScreen: { screen: DealScreen },
   // LaunchScreen: { screen: LaunchScreen },
+  DealScreen: { screen: DealScreen },
   tabNavigator: { screen: tabNavigator }
 }, {
   // Default config for all screens
